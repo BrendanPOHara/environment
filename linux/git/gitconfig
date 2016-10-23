@@ -1,0 +1,13 @@
+[user]
+    name = Brendan O'Hara
+    email = lilmrbutterpantz@gmail.com
+[github]
+    user = BrendanPOHara
+[core]
+    editor = vim
+[push]
+    default = current
+[alias]
+    l = log --oneline
+    lg = log --oneline --graph --decorate
+    ls = ls-files
