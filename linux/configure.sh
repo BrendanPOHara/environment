@@ -1,16 +1,15 @@
 # Run all sub-configuration scripts.
-cd git
-./configure_git.sh
-cd ..
+function config_dir()
+{
+    echo "Configuring \"$1\" Directory...";
+    cd $1;
+    ./configure_$1.sh;
+    cd ..;
+    echo "...Done Configuring \"$1\" Directory!";
+}
 
-cd vim
-./configure_vim.sh
-cd ..
-
-cd svn
-./configure_snv.sh
-cd ..
-
-cd llvm
-./configure_llvm.sh
-cd ..
+config_dir git
+config_dir vim
+config_dir svn
+config_dir llvm
+config_dir cmake
